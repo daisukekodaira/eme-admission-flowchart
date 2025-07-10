@@ -12,11 +12,17 @@
             <a href="index.html">日本語</a> | <a href="index-en.html" class="active">English</a>
         </div>
         
-        <h1>University of Tsukuba - Structural Energy Engineering Program Application Flow</h1>
+        <div class="header">
+            <img src="tsukuba-logo.svg" alt="University of Tsukuba Logo" class="logo">
+            <h1>University of Tsukuba - Structural Energy Engineering Program Application Flow</h1>
+        </div>
 
         <div class="progress-container">
             <div class="progress-info">
-                <span class="progress-text">Progress: 0/5</span>
+                <div class="progress-label">
+                    <img src="progress-icon.svg" alt="Progress Icon" class="progress-icon">
+                    <span class="progress-text">Progress: 0/5</span>
+                </div>
                 <button onclick="resetProgress()" class="reset-btn">Reset</button>
             </div>
             <div class="progress-bar-container">
@@ -28,6 +34,7 @@
 
             <div class="step question" id="q1">
                 <div class="question-header">
+                    <img src="question-icon.svg" alt="Question Icon" class="question-icon" data-question="q1" onclick="showExplanation('q1')">
                     <input type="checkbox" id="check-q1" class="question-checkbox">
                     <label for="check-q1">
                         <p>Q1. Are you currently enrolled at a Japanese university?</p>
@@ -41,6 +48,7 @@
 
             <div class="step question" id="q2">
                 <div class="question-header">
+                    <img src="question-icon.svg" alt="Question Icon" class="question-icon" data-question="q2" onclick="showExplanation(\"q2\")">
                     <input type="checkbox" id="check-q2" class="question-checkbox">
                     <label for="check-q2">
                         <p>Q2. When do you plan to enroll?</p>
@@ -54,6 +62,7 @@
 
             <div class="step question" id="q3">
                 <div class="question-header">
+                    <img src="question-icon.svg" alt="Question Icon" class="question-icon" data-question="q3" onclick="showExplanation('q3')">
                     <input type="checkbox" id="check-q3" class="question-checkbox">
                     <label for="check-q3">
                         <p>Q3. Have you decided on a supervisor?</p>
@@ -67,6 +76,7 @@
 
             <div class="step question" id="q3-1">
                 <div class="question-header">
+                    <img src="question-icon.svg" alt="Question Icon" class="question-icon" data-question="q3-1" onclick="showExplanation('q3-1')">
                     <input type="checkbox" id="check-q3-1" class="question-checkbox">
                     <label for="check-q3-1">
                         <p>Q3-1. Have you already received approval from your supervisor?</p>
@@ -87,6 +97,7 @@
 
             <div class="step question" id="q4">
                 <div class="question-header">
+                    <img src="question-icon.svg" alt="Question Icon" class="question-icon" data-question="q4" onclick="showExplanation('q4')">
                     <input type="checkbox" id="check-q4" class="question-checkbox">
                     <label for="check-q4">
                         <p>【For International Applicants】Q4. Do you need a scholarship?</p>
@@ -99,7 +110,21 @@
             </div>
 
         </div>
+        
+        <!-- オーバーレイ -->
+        <div id="overlay" class="overlay">
+            <div class="overlay-content">
+                <span class="close-btn">&times;</span>
+                <h3 id="overlay-title"></h3>
+                <div id="overlay-text"></div>
+            </div>
+        </div>
+        
+        <footer class="footer">
+            <p>&copy; 2025 University of Tsukuba - Structural Energy Engineering Program</p>
+            <p><a href="https://www.eme.tsukuba.ac.jp/" target="_blank">Official Site</a> | <a href="https://www.ap-graduate.tsukuba.ac.jp/" target="_blank">Graduate School Info</a></p>
+        </footer>
     </div>
-    <script src="progress.js"></script>
+    <script src="progress-en.js"></script>
 </body>
 </html>
