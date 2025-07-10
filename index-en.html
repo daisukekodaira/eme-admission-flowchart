@@ -14,10 +14,25 @@
         
         <h1>University of Tsukuba - Structural Energy Engineering Program Application Flow</h1>
 
+        <div class="progress-container">
+            <div class="progress-info">
+                <span class="progress-text">Progress: 0/5</span>
+                <button onclick="resetProgress()" class="reset-btn">Reset</button>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-bar"></div>
+            </div>
+        </div>
+
         <div class="flowchart">
 
             <div class="step question" id="q1">
-                <p>Q1. Are you currently enrolled at a Japanese university?</p>
+                <div class="question-header">
+                    <input type="checkbox" id="check-q1" class="question-checkbox">
+                    <label for="check-q1">
+                        <p>Q1. Are you currently enrolled at a Japanese university?</p>
+                    </label>
+                </div>
                 <div class="options">
                     <span class="yes">Yes → <a href="#q2">Go to Q2</a></span>
                     <span class="no">No → <a href="#q4">Go to International Application Flow</a></span>
@@ -25,7 +40,12 @@
             </div>
 
             <div class="step question" id="q2">
-                <p>Q2. When do you plan to enroll?</p>
+                <div class="question-header">
+                    <input type="checkbox" id="check-q2" class="question-checkbox">
+                    <label for="check-q2">
+                        <p>Q2. When do you plan to enroll?</p>
+                    </label>
+                </div>
                 <div class="options">
                     <span>April Enrollment → <a href="#q3">Go to Q3</a></span>
                     <span>October Enrollment → <a href="#q3">Go to Q3</a></span>
@@ -33,7 +53,12 @@
             </div>
 
             <div class="step question" id="q3">
-                <p>Q3. Have you decided on a supervisor?</p>
+                <div class="question-header">
+                    <input type="checkbox" id="check-q3" class="question-checkbox">
+                    <label for="check-q3">
+                        <p>Q3. Have you decided on a supervisor?</p>
+                    </label>
+                </div>
                 <div class="options">
                     <span>Yes → <a href="#q3-1">Go to Q3-1</a></span>
                     <span>No → <a href="https://www.eme.tsukuba.ac.jp/professor" target="_blank">Check Faculty List</a></span>
@@ -41,7 +66,12 @@
             </div>
 
             <div class="step question" id="q3-1">
-                <p>Q3-1. Have you already received approval from your supervisor?</p>
+                <div class="question-header">
+                    <input type="checkbox" id="check-q3-1" class="question-checkbox">
+                    <label for="check-q3-1">
+                        <p>Q3-1. Have you already received approval from your supervisor?</p>
+                    </label>
+                </div>
                 <div class="options">
                     <span>
                     Yes → <a href="https://www.ap-graduate.tsukuba.ac.jp/course/sie/first_all/" target="_blank">Proceed to Application (Click)</a>
@@ -56,7 +86,12 @@
             </div>
 
             <div class="step question" id="q4">
-                <p>【For International Applicants】Q4. Do you need a scholarship?</p>
+                <div class="question-header">
+                    <input type="checkbox" id="check-q4" class="question-checkbox">
+                    <label for="check-q4">
+                        <p>【For International Applicants】Q4. Do you need a scholarship?</p>
+                    </label>
+                </div>
                 <div class="options">
                     <span>Yes → Go to Scholarship Information</span>
                     <span>No → Go to Application Preparation</span>
@@ -65,5 +100,6 @@
 
         </div>
     </div>
+    <script src="progress.js"></script>
 </body>
 </html>
