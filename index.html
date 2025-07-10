@@ -8,35 +8,39 @@
 </head>
 <body>
     <div class="container">
+        <div class="language-switcher">
+            <a href="index.html" class="active">日本語</a> | <a href="index-en.html">English</a>
+        </div>
+        
         <h1>筑波大学構造エネルギー工学プログラム 出願フロー</h1>
 
         <div class="flowchart">
 
-            <div class="step question">
+            <div class="step question" id="q1">
                 <p>Q1. 現在、日本の大学に所属していますか？</p>
                 <div class="options">
-                    <span class="yes">Yes → Q2へ</span>
-                    <span class="no">No → 海外出願フローへ</span>
+                    <span class="yes">Yes → <a href="#q2">Q2へ</a></span>
+                    <span class="no">No → <a href="#q4">海外出願フローへ</a></span>
                 </div>
             </div>
 
-            <div class="step question">
+            <div class="step question" id="q2">
                 <p>Q2. 入学時期はいつですか？</p>
                 <div class="options">
-                    <span>4月入学 → Q3へ</span>
-                    <span>10月入学 → Q3へ</span>
+                    <span>4月入学 → <a href="#q3">Q3へ</a></span>
+                    <span>10月入学 → <a href="#q3">Q3へ</a></span>
                 </div>
             </div>
 
-            <div class="step question">
+            <div class="step question" id="q3">
                 <p>Q3. 指導教員は決まっていますか？</p>
                 <div class="options">
-                    <span>Yes → Q3-1へ</span>
+                    <span>Yes → <a href="#q3-1">Q3-1へ</a></span>
                     <span>No → <a href="https://www.eme.tsukuba.ac.jp/professor" target="_blank">教員リストを確認</a></span>
                 </div>
             </div>
 
-            <div class="step question">
+            <div class="step question" id="q3-1">
                 <p>Q3-1. 既に教員から許諾をもらっていますか？</p>
                 <div class="options">
                     <span>
@@ -52,7 +56,7 @@
             </div>
 
 
-            <div class="step question">
+            <div class="step question" id="q4">
                 <p>【海外出願者用】Q4. 奨学金は必要ですか？</p>
                 <div class="options">
                     <span>Yes → 奨学金情報へ</span>

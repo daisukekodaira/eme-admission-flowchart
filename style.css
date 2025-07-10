@@ -4,10 +4,37 @@ body {
     padding: 20px;
     display: flex;
     justify-content: center;
+    scroll-behavior: smooth;
 }
 
 .container {
     max-width: 800px;
+}
+
+/* 言語切り替えスタイル */
+.language-switcher {
+    text-align: right;
+    margin-bottom: 20px;
+    padding: 10px 0;
+}
+
+.language-switcher a {
+    color: #666;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.language-switcher a:hover {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.language-switcher a.active {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
 }
 
 .flowchart {
@@ -41,4 +68,30 @@ body {
 
 .options .no {
     color: #cc3300;
+}
+
+/* 内部リンクのスタイリング */
+.options a {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.options a:hover {
+    text-decoration: underline;
+    color: #004499;
+}
+
+/* 質問ブロックがターゲットになった時のハイライト効果 */
+.step:target {
+    background-color: #e8f5e8;
+    border-color: #2e7d32;
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+}
+
+.guide-image {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
 }

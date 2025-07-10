@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University of Tsukuba - Structural Energy Engineering Program Application Flow</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="language-switcher">
+            <a href="index.html">日本語</a> | <a href="index-en.html" class="active">English</a>
+        </div>
+        
+        <h1>University of Tsukuba - Structural Energy Engineering Program Application Flow</h1>
+
+        <div class="flowchart">
+
+            <div class="step question" id="q1">
+                <p>Q1. Are you currently enrolled at a Japanese university?</p>
+                <div class="options">
+                    <span class="yes">Yes → <a href="#q2">Go to Q2</a></span>
+                    <span class="no">No → <a href="#q4">Go to International Application Flow</a></span>
+                </div>
+            </div>
+
+            <div class="step question" id="q2">
+                <p>Q2. When do you plan to enroll?</p>
+                <div class="options">
+                    <span>April Enrollment → <a href="#q3">Go to Q3</a></span>
+                    <span>October Enrollment → <a href="#q3">Go to Q3</a></span>
+                </div>
+            </div>
+
+            <div class="step question" id="q3">
+                <p>Q3. Have you decided on a supervisor?</p>
+                <div class="options">
+                    <span>Yes → <a href="#q3-1">Go to Q3-1</a></span>
+                    <span>No → <a href="https://www.eme.tsukuba.ac.jp/professor" target="_blank">Check Faculty List</a></span>
+                </div>
+            </div>
+
+            <div class="step question" id="q3-1">
+                <p>Q3-1. Have you already received approval from your supervisor?</p>
+                <div class="options">
+                    <span>
+                    Yes → <a href="https://www.ap-graduate.tsukuba.ac.jp/course/sie/first_all/" target="_blank">Proceed to Application (Click)</a>
+                    </span>
+                    <span>No → Contact the faculty member directly to obtain approval</span>
+                </div>
+                <div class="guide-image">
+                    <p>If Yes, please select as follows on the linked page:</p>
+                    <img src="procedure-step1.png" alt="How to select degree program" style="width:100%; max-width:600px;">
+                    <img src="procedure-step2.png" alt="How to select application method" style="width:100%; max-width:600px;">
+                </div>
+            </div>
+
+            <div class="step question" id="q4">
+                <p>【For International Applicants】Q4. Do you need a scholarship?</p>
+                <div class="options">
+                    <span>Yes → Go to Scholarship Information</span>
+                    <span>No → Go to Application Preparation</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
