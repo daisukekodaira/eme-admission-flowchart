@@ -248,7 +248,7 @@ function showExplanation(questionId) {
         title.textContent = explanation.title;
         text.innerHTML = explanation.content;
         overlay.style.display = 'flex';
-        document.body.style.overflow = 'hidden';
+        // スクロールを有効のまま維持
     }
 }
 
@@ -287,7 +287,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             overlay.style.display = 'flex';
-            document.body.style.overflow = 'hidden';
+            // スクロールを有効のまま維持
         });
     });
 
@@ -295,7 +295,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (closeBtn) {
         closeBtn.addEventListener('click', () => {
             overlay.style.display = 'none';
-            document.body.style.overflow = '';
         });
     }
 
@@ -303,7 +302,6 @@ document.addEventListener('DOMContentLoaded', () => {
     overlay.addEventListener('click', (e) => {
         if (e.target === overlay) {
             overlay.style.display = 'none';
-            document.body.style.overflow = '';
         }
     });
 
@@ -311,7 +309,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && overlay.style.display === 'flex') {
             overlay.style.display = 'none';
-            document.body.style.overflow = '';
         }
     });
 
@@ -319,7 +316,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('resize', () => {
         if (overlay.style.display === 'flex') {
             overlay.style.display = 'none';
-            document.body.style.overflow = '';
         }
     });
 });
@@ -328,5 +324,4 @@ document.addEventListener('DOMContentLoaded', () => {
 function closeOverlay() {
     const overlay = document.getElementById('overlay');
     overlay.style.display = 'none';
-    document.body.style.overflow = '';
 }
